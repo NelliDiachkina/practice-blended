@@ -1,5 +1,8 @@
 import { getAllRecipes } from './js/dummy-api';
+import { renderRecipeMarkup } from './js/render-functions';
 
 document.addEventListener('DOMContentLoaded', async () => {
-  console.log(await getAllRecipes());
+  const { recipes } = await getAllRecipes();
+  console.log(recipes);
+  renderRecipeMarkup(recipes);
 });
