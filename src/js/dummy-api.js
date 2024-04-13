@@ -1,17 +1,21 @@
-import axios from 'axios';
-
-const BASE_URL = 'https://dummyjson.com/recipes';
-
-export async function getAllRecipes(url, options = {}) {
-  const response = await axios(url, options);
-  if (!response.ok) {
-    throw new Error(response.statusText);
+async function fetchRecipes() {
+  try {
+    const response = await fetch('https://dummyjson.com/recipes');
+    if (!response.ok) {
+      throw new Error('response is not ok');
+    }
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error('Error:', error);
+    throw error;
   }
-  return await response.json();
 }
 
-getAllRecipes(BASE_URL)
-  .then(recipes =>
-    container.insertAdjacentHTML('beforeend', createMarkup(recipes))
-  )
-  .catch(error => console.log(error));
+async function getData() {
+  try {
+    const recipes = await fetchRecipes();
+  } catch (error) {}
+}
+
+getData();
