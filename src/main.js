@@ -1,4 +1,6 @@
 import { getAllRecipes } from './js/dummy-api';
+import { onBackdropClick, onRecipeItemClick } from './js/handlers';
+import { refs } from './js/refs';
 import { renderRecipeMarkup } from './js/render-functions';
 
 document.addEventListener('DOMContentLoaded', async () => {
@@ -6,3 +8,6 @@ document.addEventListener('DOMContentLoaded', async () => {
   console.log(recipes);
   renderRecipeMarkup(recipes);
 });
+
+refs.recipeList.addEventListener('click', onRecipeItemClick);
+refs.backdrop.addEventListener('click', onBackdropClick);
