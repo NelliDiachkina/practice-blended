@@ -1,4 +1,4 @@
-import { getAllRecipes } from './js/dummy-api';
+import { getAllRecipes, getRecipeById } from './js/dummy-api';
 import { onBackdropClick, onRecipeItemClick } from './js/handlers';
 import { refs } from './js/refs';
 import { renderRecipeMarkup } from './js/render-functions';

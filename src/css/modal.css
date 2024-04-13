@@ -23,8 +23,8 @@
 
 .modal {
   background-color: #fff;
-  height: 250px;
-  width: 300px;
+  /* height: 600px; */
+  width: 600px;
   border-radius: 4px;
   padding: 5px;
   transform: translateY(0);

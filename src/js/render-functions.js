@@ -3,15 +3,15 @@ import { refs } from './refs';
 export function renderRecipeMarkup(recepies) {
   const markup = recepies
     .map(
-      ({ image }) => `<li class="recipe-card">
-  <img src="${image}" alt="">
+      ({ image, id }) => `<li class="recipe-card">
+  <img src="${image}" alt="" data-id="${id}">
 </li>`
     )
     .join(``);
   refs.recipeList.insertAdjacentHTML('beforeend', markup);
 }
 
-export function getSingleRecipeMarkup(
+export function renderModalRecipeMarkup(
   {
     name,
     ingredients,
