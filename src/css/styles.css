@@ -22,3 +22,30 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
+body {
+  margin: 0;
+}
+.recipe-list {
+  width: 1440px;
+
+  margin: 24px auto;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 32px;
+  justify-content: center;
+  height: auto;
+}
+.recipe-card {
+  width: calc((100% - 3 * 32px) / 4);
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0px 0px 2px 2px rgba(135, 55, 165, 0.64);
+  transition: box-shadow, scale 300ms ease-in-out;
+}
+.recipe-card:hover {
+  scale: 1.1;
+  box-shadow: 0px 0px 6px 6px rgba(135, 55, 165, 0.64);
+}
