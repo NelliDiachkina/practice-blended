@@ -22,14 +22,38 @@
 }
 
 .modal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background-color: #fff;
-  /* height: 600px; */
-  width: 600px;
-  border-radius: 4px;
+  width: 1240px;
+  border-radius: 8px;
+  object-fit: cover;
   padding: 5px;
   transform: translateY(0);
   transition: transform 700ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.modal img {
+  width: 600px;
+}
 .backdrop.is-hidden .modal {
   transform: translateY(-200%);
+}
+
+.modal-description {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+}
+.modal-title {
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 8px;
+}
+.modal-chapter {
+  font-size: 18px;
+  font-weight: 700;
+}
+.modal-chapter-text {
+  margin-bottom: 16px;
 }
